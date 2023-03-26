@@ -11,4 +11,8 @@ animals.forEach((ele) => {
     ele.onclick = () => {
         window.localStorage.animal =  ele.dataset.id;
     }
-})
+});
+
+document.querySelector('.brand').onclick = () => {
+    document.querySelector('.nav-list').classList.toggle('on')
+}
