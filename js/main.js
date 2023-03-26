@@ -19,9 +19,15 @@ document.querySelector('.brand').onclick = () => {
     document.querySelector('.content p').classList.toggle('off');
     document.querySelector('.content button').classList.toggle('off');
 }
-document.querySelector('.toggler').onclick = () => {
+document.querySelectorAll('.toggler')[0].onclick = () => {
     document.querySelector('.nav-list').classList.toggle('on');
     document.querySelector('.content h1').classList.toggle('off');
     document.querySelector('.content p').classList.toggle('off');
     document.querySelector('.content button').classList.toggle('off');
+}
+document.querySelector('.categories').onclick = () => {
+    document.querySelector('.categories-list').classList.toggle('on')
+}
+document.querySelectorAll('.toggler')[1].onclick = function(){
+    this.parentElement.classList.toggle('on')
 }

@@ -97,32 +97,27 @@ section.home .main .content button{
 .nav-list li {
     position: relative;
 }
-.nav-list li .drop{
+
+ul.drop{
+    list-style: none;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+    top: 0;
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    position: fixed;
     background: white;
-    position: absolute;
-    width: 100%;
-    top: 30px;
-    transition: 0.5s;
-    border-radius: 10px;
-    padding: 0px 10px;
-    max-height: 0px;
-    overflow: hidden;
+    z-index: 1;
 }
-.nav-list li .drop a{
-    color: black !important;
-    font-size: 16px !important;
-    margin: 5px;
-    background-color: #bebebe;
-    border-radius: 4px;
-    width: 70%;
+ul.drop li{
+    width: 160px;
     text-align: center;
-}
-ul li:hover div{
-    max-height: 400px !important;
-    padding:  10px 10px !important;
 }
 
 
@@ -133,6 +128,10 @@ section.home .main .content button{
 }
 .toggler{
     display: none;
+}
+
+.drop.on{
+    height: 100vh;
 }
 @media (orientation: portrait), (max-width:900px) {
     section.home header .brand {
