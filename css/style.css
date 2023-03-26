@@ -1,0 +1,124 @@
+:root{
+    --bs-yellow: #fbbc05;
+    --bs-green: #34a853;
+}
+body{
+    margin: 0;
+    font-family: system-ui;
+}
+section.home{
+    height: 100vh;
+    background: url('../imgs/tiger.jpg');
+    background-size: cover;
+    width: 100%;
+}
+section.home .main{
+    height: 100%;
+    width: 100%;
+    backdrop-filter: brightness(0.5);
+    display: flex;
+    align-items: center;
+}
+section.home header{
+    padding: 0.4em 1em;
+    font-family: system-ui;
+    display: flex;
+    width: 100%;
+    top: -1000px;
+    transition: 0.5s;
+    box-sizing: border-box;
+    position: fixed;
+    align-items: center;
+}
+section.home header .brand {
+    color: #fbbc05;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+section.home header .brand img{
+    height: 1.6em;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+section.home header .nav-list{
+    display: flex;
+    margin-left: auto;
+    list-style: none;
+}
+section.home header .nav-list li a{
+    padding: 5px 20px;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+section.home .main .content{
+    margin-left: 10em;
+}
+section.home .main .content h1{
+    color: white;
+    font-size: 2em;
+    margin: 10px;
+    position: relative;
+    left: -1000px;
+    transition: 0.5s;
+}
+section.home .main .content p{
+    color: rgb(204, 204, 204);
+    font-size: 1.2em;
+    margin: 10px 20px;
+    position: relative;
+    left: -500px;
+    transition: 0.5s;
+}
+section.home .main .content button{
+    background: #fbbc05;
+    border: none;
+    padding:10px 20px;
+    border-radius: 4px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #34a853;
+    font-weight: 900;
+    margin: 10px 30px;
+    position: relative;
+    left: -200px;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+}
+.nav-list li {
+    position: relative;
+}
+.nav-list li .drop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 0px 10px;
+    max-height: 0px;
+    overflow: hidden;
+}
+.nav-list li .drop a{
+    color: black !important;
+    font-size: 16px !important;
+    margin: 5px;
+    background-color: #bebebe;
+    border-radius: 4px;
+    width: 70%;
+    text-align: center;
+}
+ul li:hover div{
+    max-height: 400px !important;
+    padding:  10px 10px !important;
+}
