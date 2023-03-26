@@ -11,7 +11,7 @@ section.home{
     background: url('../imgs/tiger.jpg');
     background-size: cover;
     width: 100%;
-    background-position: 80% 5%;
+    background-position: 80% 75%;
 }
 section.home .main{
     height: 100%;
@@ -126,36 +126,51 @@ ul li:hover div{
 }
 
 
+section.home .main .content h1,
+section.home .main .content p,
+section.home .main .content button{
+    position:relative;
+}
+.toggler{
+    display: none;
+}
 @media (orientation: portrait), (max-width:900px) {
     section.home header .brand {
         font-size: 2em ;
     }
+    section.home header{
+        padding-left: 0;
+        height: 10vh;
+    }
     header .nav-list{
         position: absolute;
         flex-direction: column;
-        top: 100%;
-        max-height: 0px;
+        top: 0%;
+        height: 0px;
         overflow: hidden;
         background: rgb(255, 255, 255);
-        width: calc(100% - 2em);
+        width: 100%;
         margin: 0;
         transition: 0.5s;
         padding: 0;
         z-index: 1;
-        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
     }
     section.home header .nav-list li a{
         color: black;
-        font-weight: 600;
+        font-weight: 900;
         width: 100%;
+        text-transform: uppercase;
     }
     section.home header .nav-list li{
         padding: 10px 0;
         margin: 0 10px;
-        border-bottom: 0.4px solid #ddd;
+        border-bottom: 0.4px solid #969696;
     }
     header .nav-list.on{
-        max-height: 300px;
+        height: 100vh;
+        top: 0;
         padding: 30px 0;
     }
     .main{
@@ -172,5 +187,17 @@ ul li:hover div{
     }
     .home{
     background-position: 80% 5%;
+    }
+    .off{
+        display: none !important;
+    }
+    .toggler{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 2rem;
+        border: none;
+        background: none;
     }
 }

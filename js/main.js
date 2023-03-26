@@ -14,5 +14,14 @@ animals.forEach((ele) => {
 });
 
 document.querySelector('.brand').onclick = () => {
-    document.querySelector('.nav-list').classList.toggle('on')
+    document.querySelector('.nav-list').classList.toggle('on');
+    document.querySelector('.content h1').classList.toggle('off');
+    document.querySelector('.content p').classList.toggle('off');
+    document.querySelector('.content button').classList.toggle('off');
+}
+document.querySelector('.toggler').onclick = () => {
+    document.querySelector('.nav-list').classList.toggle('on');
+    document.querySelector('.content h1').classList.toggle('off');
+    document.querySelector('.content p').classList.toggle('off');
+    document.querySelector('.content button').classList.toggle('off');
 }
