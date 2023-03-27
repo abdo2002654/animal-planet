@@ -1,65 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/all.min.css" />
-    </head>
-    <body>
-        <section class="home">
-            <div class="main">
-                <header>
-                    <a href="#" class="brand">
-                        <img src="imgs/logo.png" alt="" />animal<span
-                            style="color: white"
-                            >planet</span
-                        >
-                    </a>
-                    <ul class="nav-list">
-                        <button class="toggler"><i class="fa-solid fa-close"></i></button>
-                        <li>
-                            <a href="">home</a>
-                        </li>
-                        <li>
-                            <a href="#cat" class="categories">categories</a>
-                            <ul class="drop categories-list">
-                                <button class="toggler"><i class="fa-solid fa-close"></i></button>
-                                <li><a href="#">wild</a></li>
-                                <li><a href="#">domestic</a></li>
-                                <li><a href="#">rare</a></li>
-                                <li><a href="#">birds</a></li>
-                                <li><a href="#">fish</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <section class="home">
+        <div class="main">
+            <header>
+                <a href="#" class="brand">
+                    <img src="/imgs/logo.png" alt=""> ANIMAL<span style="color: white;">PLANET</span>
+                </a>
+                <ul class="nav-list">
+                    <button class="closer">
+                        <i class="fa-solid fa-close"></i>
+                    </button>
+                    <li>
+                        <a href="#">home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="toggler" data-toggler=".categories">categories</a>
+                    </li>
+                    <li>
+                        <a href="#">rare kinds</a>
+                    </li>
+                    <li>
+                        <a href="#">about us</a>
+                    </li>
+                </ul>
+                <button class="toggler" data-toggler=".nav-list"><i class="fa fa-bars"></i></button>
+            </header>
+        </div>
+        <ul class="drop categories">
+            <button class="closer"><i class="fa-solid fa-close"></i></button>
+            <li><a href="#" class="toggler" data-toggler=".wild">wild animals</a></li>
+            <li><a href="#"class="toggler" data-toggler=".domestic">domestic animals</a></li>
+            <li><a href="#"class="toggler" data-toggler=".rare">rare animals</a></li>
+            <li><a href="#"class="toggler" data-toggler=".birds">flying birds</a></li>
+            <li><a href="#"class="toggler" data-toggler=".crawlers">crawlers</a></li>
+            <li><a href="#"class="toggler" data-toggler=".insects">insects</a></li>
+        </ul>
 
-                                <li><a href="#">wild</a></li>
-                                <li><a href="#">domestic</a></li>
-                                <li><a href="#">rare</a></li>
-                                <li><a href="#">birds</a></li>
-                                <li><a href="#">fish</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="">rare kinds</a>
-                        </li>
-                        <li>
-                            <a href="">about us</a>
-                        </li>
-                    </ul>
-                </header>
-                <div class="content">
-                    <h1>WELCOME TO<br />THE ANIMALS PLANET</h1>
-                    <p>
-                        wecome to the world of jungle<br />
-                        discover all animals in the world<br />
-                        be afriend with the jungle
-                    </p>
-                    <button>take a look</button>
-                </div>
-            </div>
-        </section>
-        <script src="js/main.js"></script>
-        <script src="js/all.min.js"></script>
-    </body>
+        <ul class="drop wild">
+            <button class="closer"><i class="fa-solid fa-close"></i></button>
+            <h1>WILD ANIMALS</h1>
+            <li><a href="#">wild animals</a></li>
+            <li><a href="#">domestic animals</a></li>
+            <li><a href="#">rare animals</a></li>
+            <li><a href="#">flying birds</a></li>
+            <li><a href="#">crawlers</a></li>
+            <li><a href="#">insects</a></li>
+        </ul>
+        <ul class="drop domestic">
+            <button class="closer"><i class="fa-solid fa-close"></i></button>
+            <h1>DOMESTIC ANIMALS</h1>
+            <li><a href="#">wild animals</a></li>
+            <li><a href="#">domestic animals</a></li>
+            <li><a href="#">rare animals</a></li>
+            <li><a href="#">flying birds</a></li>
+            <li><a href="#">crawlers</a></li>
+            <li><a href="#">insects</a></li>
+        </ul>
+        <ul class="drop rare">
+            <button class="closer"><i class="fa-solid fa-close"></i></button>
+            <h1>RARE ANIMALS</h1>
+            <li><a href="#">wild animals</a></li>
+            <li><a href="#">domestic animals</a></li>
+            <li><a href="#">rare animals</a></li>
+            <li><a href="#">flying birds</a></li>
+            <li><a href="#">crawlers</a></li>
+            <li><a href="#">insects</a></li>
+        </ul>
+        <ul class="drop birds">
+            <button class="closer"><i class="fa-solid fa-close"></i></button>
+            <h1>BIRDS</h1>
+            <li><a href="#">wild animals</a></li>
+            <li><a href="#">domestic animals</a></li>
+            <li><a href="#">rare animals</a></li>
+            <li><a href="#">flying birds</a></li>
+            <li><a href="#">crawlers</a></li>
+            <li><a href="#">insects</a></li>
+        </ul>
+        <ul class="drop crawlers">
+            <button class="closer"><i class="fa-solid fa-close"></i></button>
+            <h1>CRAWLERS</h1>
+            <li><a href="#">wild animals</a></li>
+            <li><a href="#">domestic animals</a></li>
+            <li><a href="#">rare animals</a></li>
+            <li><a href="#">flying birds</a></li>
+            <li><a href="#">crawlers</a></li>
+            <li><a href="#">insects</a></li>
+        </ul>
+        <ul class="drop insects">
+            <button class="closer"><i class="fa-solid fa-close"></i></button>
+            <h1>INSECTS</h1>
+            <li><a href="#">wild animals</a></li>
+            <li><a href="#">domestic animals</a></li>
+            <li><a href="#">rare animals</a></li>
+            <li><a href="#">flying birds</a></li>
+            <li><a href="#">crawlers</a></li>
+            <li><a href="#">insects</a></li>
+        </ul>
+    </section>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>

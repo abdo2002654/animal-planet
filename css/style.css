@@ -1,6 +1,6 @@
 :root{
-    --bs-yellow: #fbbc05;
-    --bs-green: #34a853;
+    --bs-green: #34A853;    
+    --bs-yellow: #fbbc05;    
 }
 body{
     margin: 0;
@@ -8,195 +8,157 @@ body{
 }
 section.home{
     height: 100vh;
+    width: 100%;
     background: url('../imgs/tiger.jpg');
     background-size: cover;
-    width: 100%;
     background-position: 80% 75%;
+    position: relative;
 }
 section.home .main{
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    backdrop-filter: brightness(0.2);
-    display: flex;
-    position: relative;
-    align-items: center;
+    backdrop-filter: brightness(0.4);
 }
-section.home header{
-    padding: 0.4em 1em;
-    font-family: system-ui;
-    display: flex;
-    width: 100%;
-    top: -1000px;
-    transition: 0.5s;
-    box-sizing: border-box;
+section.home .main header{
     position: fixed;
-    align-items: center;
-}
-section.home header .brand {
-    color: #fbbc05;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    font-weight: 900;
-}
-section.home header .brand img{
-    height: 1.6em;
-    border: 1px solid #ffffff;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-section.home header .nav-list{
-    display: flex;
-    margin-left: auto;
-    list-style: none;
-}
-section.home header .nav-list li a{
-    padding: 5px 20px;
-    position: relative;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: 600;
-}
-section.home .main .content{
-    margin-left: 10em;
-}
-section.home .main .content h1{
-    color: white;
-    font-size: 2em;
-    margin: 10px;
-    position: relative;
-    left: -1000px;
-    transition: 0.5s;
-}
-section.home .main .content p{
-    color: rgb(204, 204, 204);
-    font-size: 1.2em;
-    margin: 10px 20px;
-    position: relative;
-    left: -500px;
-    transition: 0.5s;
-}
-section.home .main .content button{
-    background: #fbbc05;
-    border: none;
-    padding:10px 20px;
-    border-radius: 4px;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    color: #34a853;
-    font-weight: 900;
-    margin: 10px 30px;
-    position: relative;
-    left: -200px;
-    transition-delay: 0.5s;
-    transition: 0.5s;
-}
-.nav-list li {
-    position: relative;
-}
-
-ul.drop{
-    list-style: none;
-    height: 0px;
-    overflow: hidden;
-    transition: 0.5s;
     top: 0;
     width: 100%;
-    left: 0;
+    padding: 0.4em 1em;
+    display: flex;
+    align-items: center;
     box-sizing: border-box;
+}
+section.home .main header .brand{
+    color: var(--bs-yellow);
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    text-decoration: none;
+}
+section.home .main header .brand img{
+    height: 50px;
+    margin-right: 10px;
+}
+section.home .main header .nav-list{
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+section.home .main header .nav-list li a{
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    margin: 10px 20px;
+    font-weight: 600;
+}
+
+.closer{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5em;
+    border: none;
+    background: none;
+    display: none;
+}
+button.toggler{
+    margin: 15px;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    margin-left: auto;
+    display: none;
+}
+.drop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0vh;
+    overflow: hidden;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0;
     background: white;
-    z-index: 1;
+    box-sizing: border-box;
+    transition: 0.5s;
 }
-ul.drop li{
-    width: 160px;
-    text-align: center;
+.drop h1{
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    font-size: 2em;
+    margin: 1em;
+    font-family: sans-serif;
+}
+.drop li {
+    padding: 10px;
+    border-bottom: 2px solid var(--bs-green);
+}
+.drop li a{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--bs-green);
+}
+.drop .closer{
+    color: var(--bs-green);
+}
+.on{
+    height: 100vh !important;
+}
+.on .closer{
+    display: block;
 }
 
-
-section.home .main .content h1,
-section.home .main .content p,
-section.home .main .content button{
-    position:relative;
-}
-.toggler{
-    display: none;
-}
-
-.drop.on{
-    height: 100vh;
-}
-@media (orientation: portrait), (max-width:900px) {
-    section.home header .brand {
-        font-size: 2em ;
+@media (max-width: 880px){
+    section.home .main header .brand{
+        font-size: 1.5em;
     }
-    section.home header{
-        padding-left: 0;
-        height: 10vh;
+    section.home .main header .nav-list li a{
+        margin: 10px;
     }
-    header .nav-list{
+}
+@media (max-width: 730px){
+    section.home .main header{
+        padding: 0 0;
+    }
+    section.home .main header .brand{
+        margin: 10px;
+    }
+    section.home .main header .nav-list{
         position: absolute;
-        flex-direction: column;
-        top: 0%;
-        height: 0px;
-        overflow: hidden;
-        background: rgb(255, 255, 255);
+        height: 0vh;
         width: 100%;
-        margin: 0;
-        transition: 0.5s;
-        padding: 0;
-        z-index: 1;
-        justify-content: center;
-        align-items: center;
-    }
-    section.home header .nav-list li a{
-        color: black;
-        font-weight: 900;
-        width: 100%;
-        text-transform: uppercase;
-    }
-    section.home header .nav-list li{
-        padding: 10px 0;
-        margin: 0 10px;
-        border-bottom: 0.4px solid #969696;
-    }
-    header .nav-list.on{
-        height: 100vh;
         top: 0;
-        padding: 30px 0;
-    }
-    .main{
-        justify-content: center;
-    }
-    .main .content{
-        margin-left: 0px !important;
-        display: flex;
+        margin-top: 0;
+        background: white;
+        box-sizing: border-box;
+        overflow: hidden;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        padding-left: 0;
+        transition: 0.5s;
     }
-    .main .content h1{
-        text-align: center;
+    section.home .main header .nav-list li{
+        padding: 10px;
+        border-bottom: 0.4px solid #757575;
     }
-    .home{
-    background-position: 80% 5%;
+    section.home .main header .nav-list li a{
+        color: black;
+        text-transform: uppercase;
+        padding: 10px;
+        font-weight: 900;
     }
-    .off{
-        display: none !important;
-    }
-    .toggler{
+    button.toggler{
         display: block;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        font-size: 2rem;
-        border: none;
-        background: none;
+        color: white;
+        top: 20px;
     }
 }
